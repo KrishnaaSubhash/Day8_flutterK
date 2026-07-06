@@ -45,50 +45,15 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    ActionChip(
-                      label: const Text(
-                        "Shows",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      backgroundColor: Colors.grey.shade800,
-                      onPressed: () {},
-                    ),
+                   customChips("Shows"),
                     SizedBox(width: 7),
-                    ActionChip(
-                      label: Text(
-                        "Movies",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      backgroundColor: Colors.grey.shade800,
-                      onPressed: () {},
-                    ),
+                    customChips("Movies"),
                     SizedBox(width: 7),
-                    ActionChip(
-                      label: Text(
-                        "Games",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      backgroundColor: Colors.grey.shade800,
-                      onPressed: () {},
-                    ),
+                   customChips("Games"),
                     SizedBox(width: 7),
-                    ActionChip(
-                      label: Text(
-                        "New & Hot",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      backgroundColor: Colors.grey.shade800,
-                      onPressed: () {},
-                    ),
+                    customChips("New movies"),
                     SizedBox(width: 7),
-                    ActionChip(
-                      label: Text(
-                        "Categories",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                      backgroundColor: Colors.grey.shade800,
-                      onPressed: () {},
-                    ),
+                    customChips("Categories")
                   ],
                 ),
               ),
@@ -107,21 +72,13 @@ class Homepage extends StatelessWidget {
                     Positioned(
                       bottom: 20,
                       left: 35,
-                      child: ActionChip(
-                        avatar: Icon(Icons.play_arrow_rounded),
-                        label: const Text("Play Now"),
-                        onPressed: () {},
-                      ),
+                      child:customChips("Play now"),
                     ),
                     Positioned(
                       bottom: 20,
                       left: 200,
-                      child: ActionChip(
-                        avatar: Icon(Icons.add),
-                        label: const Text("Watch List"),
-                        onPressed: () {},
-                      ),
-                    ),
+                      child: customChips("Watch now")
+                    ), 
                   ],
                 ),
               ),
@@ -470,73 +427,15 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtHf5c4q2onMD9-pn03gFXRLvPoAD1Np6RS_faygyHw&s",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                  imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtHf5c4q2onMD9-pn03gFXRLvPoAD1Np6RS_faygyHw&s"),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://i.mydramalist.com/JB4ZoX_3m.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                   imageContainer("https://i.mydramalist.com/JB4ZoX_3m.jpg",),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                   imageContainer("https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10"),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10"),
                     SizedBox(width: 8),
                   ],
                 ),
@@ -546,5 +445,32 @@ class Homepage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Container imageContainer(String url) {
+    return Container(
+                    width: 100,
+                    height: 100,
+
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.white,
+                    ),
+                    child: Image.network(
+                      "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
+                      fit: BoxFit.cover,
+                    ),
+                  );
+  }
+
+  ActionChip customChips(String customLabel) {
+    return ActionChip(
+                    label: Text(
+                      customLabel,
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    backgroundColor: Colors.grey.shade800,
+                    onPressed: () {},
+                  );
   }
 }
