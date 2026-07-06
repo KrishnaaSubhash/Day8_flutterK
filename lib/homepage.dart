@@ -45,15 +45,15 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                   customChips("Shows"),
+                    customChips("Shows"),
                     SizedBox(width: 7),
                     customChips("Movies"),
                     SizedBox(width: 7),
-                   customChips("Games"),
+                    customChips("Games"),
                     SizedBox(width: 7),
                     customChips("New movies"),
                     SizedBox(width: 7),
-                    customChips("Categories")
+                    customChips("Categories"),
                   ],
                 ),
               ),
@@ -71,14 +71,26 @@ class Homepage extends StatelessWidget {
                     ),
                     Positioned(
                       bottom: 20,
-                      left: 35,
-                      child:customChips("Play now"),
+                      left: 40,
+                      child: customChips("Play now"),
                     ),
                     Positioned(
                       bottom: 20,
-                      left: 200,
-                      child: customChips("Watch now")
-                    ), 
+                      left: 210,
+                      child: ActionChip(
+                        avatar: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                        label: Text(
+                          "My List",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        backgroundColor: Colors.grey.shade800,
+                        onPressed: () {},
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -96,109 +108,13 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.purple,
-                            Colors.blue,
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "Netflix Originals", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                    recomentationBoxes("Netflix Originals"),
                     SizedBox(width: 9),
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            const Color.fromARGB(255, 179, 65, 65),
-                            const Color.fromARGB(255, 206, 42, 171),
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "Skip the Queues,Watch at home", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                    recomentationBoxes( "Skip the Queues,Watch at home"),
                     SizedBox(width: 9),
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            const Color.fromARGB(255, 109, 66, 117),
-                            const Color.fromARGB(255, 40, 33, 243),
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "International Movies & TV", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                    recomentationBoxes("International Movies & TV"),
                     SizedBox(width: 9),
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.purple,
-                            Colors.blue,
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "Bingeworthy TV Shows", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                   recomentationBoxes("Bingeworthy TV Shows"),
                   ],
                 ),
               ),
@@ -207,109 +123,13 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            const Color.fromARGB(255, 39, 176, 158),
-                            const Color.fromARGB(255, 44, 113, 170),
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "Enjoyed in India", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                    recomentationBoxes("Enjoyed in India"),
                     SizedBox(width: 9),
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            const Color.fromARGB(255, 73, 17, 170),
-                            Colors.blue,
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "Hollywood Movies", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                   recomentationBoxes("Hollywood Movies"),
                     SizedBox(width: 9),
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            const Color.fromARGB(255, 117, 166, 174),
-                            const Color.fromARGB(255, 35, 183, 84),
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "Blockbuster Movies", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                   recomentationBoxes( "Blockbuster Movies"),
                     SizedBox(width: 9),
-                    Container(
-                      width: 150,
-                      height: 60,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.purple,
-                            Colors.blue,
-                          ], // change colors here
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Text(
-                        "90-Minute Films", // your text
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
+                    recomentationBoxes("90-Minute Films"),
                   ],
                 ),
               ),
@@ -340,73 +160,15 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtHf5c4q2onMD9-pn03gFXRLvPoAD1Np6RS_faygyHw&s",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                   imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyeqQe-8p3uXFVkLoRPYOIepVzITeepi9LNxr7cOkm8Q&s=10")
+                    ,SizedBox(width: 8),
+                    imageContainer("https://i.mydramalist.com/JB4ZoX_3m.jpg"),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://i.mydramalist.com/JB4ZoX_3m.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR44dIPjFU09JHpfnHVVEv-OWNkREhJAPBFrVaSBErndg&s"),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZRqDOkpH4i0t6s6pOsddxKTvCr8h2nHXJAsFvGkvz64pvJo4bW_JcfqkO&s=10"),
                     SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    SizedBox(width: 8),
-                    Container(
-                      width: 100,
-                      height: 100,
-
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Colors.white,
-                      ),
-                      child: Image.network(
-                        "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                  imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyeqQe-8p3uXFVkLoRPYOIepVzITeepi9LNxr7cOkm8Q&s=10"),
                     SizedBox(width: 8),
                   ],
                 ),
@@ -418,7 +180,8 @@ class Homepage extends StatelessWidget {
                     "Top 10",
                     style: TextStyle(
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 22
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
                     ),
                   ),
                 ],
@@ -427,15 +190,23 @@ class Homepage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                  imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtHf5c4q2onMD9-pn03gFXRLvPoAD1Np6RS_faygyHw&s"),
+                    imageContainer(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgtHf5c4q2onMD9-pn03gFXRLvPoAD1Np6RS_faygyHw&s",
+                    ),
                     SizedBox(width: 8),
-                   imageContainer("https://i.mydramalist.com/JB4ZoX_3m.jpg",),
+                    imageContainer("https://i.mydramalist.com/JB4ZoX_3m.jpg"),
                     SizedBox(width: 8),
-                   imageContainer("https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",),
+                    imageContainer(
+                      "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
+                    ),
                     SizedBox(width: 8),
-                    imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10"),
+                    imageContainer(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10",
+                    ),
                     SizedBox(width: 8),
-                    imageContainer("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10"),
+                    imageContainer(
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRReX2DKZ_FWOTzdEdASNSGJgRQIpBy3csLKcg5unV9so3fSARr_9Y986I2&s=10",
+                    ),
                     SizedBox(width: 8),
                   ],
                 ),
@@ -447,30 +218,55 @@ class Homepage extends StatelessWidget {
     );
   }
 
-  Container imageContainer(String url) {
+  Container recomentationBoxes(String label) {
     return Container(
-                    width: 100,
-                    height: 100,
-
+                    width: 150,
+                    height: 60,
+                    alignment: Alignment.center,
                     decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Colors.purple,
+                          Colors.blue,
+                        ], // change colors here
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
                       borderRadius: BorderRadius.circular(12),
-                      color: Colors.white,
                     ),
-                    child: Image.network(
-                      "https://m.media-amazon.com/images/M/MV5BZmZhY2ViYzYtMTQ0NS00NDcyLWIxZTYtMGUyODE0NDA0NmNkXkEyXkFqcGc@._V1_.jpg",
-                      fit: BoxFit.cover,
+                    child: Text(
+                    label, // your text
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
                   );
   }
 
+  Container imageContainer(String url) {
+    return Container(
+      width: 100,
+      height: 100,
+
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.white,
+      ),
+      child: Image.network(
+        url,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
   ActionChip customChips(String customLabel) {
     return ActionChip(
-                    label: Text(
-                      customLabel,
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    backgroundColor: Colors.grey.shade800,
-                    onPressed: () {},
-                  );
+      label: Text(customLabel, style: TextStyle(color: Colors.white)),
+      backgroundColor: Colors.grey.shade800,
+      onPressed: () {},
+    );
   }
 }
